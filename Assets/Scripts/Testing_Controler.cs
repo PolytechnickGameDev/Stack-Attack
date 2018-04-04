@@ -2,13 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class HeroMove : MonoBehaviour
+public class Testing_Controler : MonoBehaviour
 {
 
     public float speed;
     public float jump;
 
-    private float gravityForce;
+    private float gravityForce = 0.009815434f;
     private Vector3 moveVector;
 
     private CharacterController ch_controller;
@@ -20,12 +20,15 @@ public class HeroMove : MonoBehaviour
     void Update()
     {
         Move();
+        moveVector.y = moveVector.y * gravityForce;
+        ch_controller.Move(moveVector * Time.deltaTime);
     }
 
     private void Move()
     {
         moveVector = Vector3.zero;
         moveVector.x = Input.GetAxis("Horizontal") * speed;
+        moveVector.y = Input.GetAxis("Vertical") * jump;
         ch_controller.Move(moveVector * Time.deltaTime);
     }
 
