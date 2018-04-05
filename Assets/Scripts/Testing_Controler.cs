@@ -8,7 +8,7 @@ public class Testing_Controler : MonoBehaviour
     public float speed;
     public float jump;
 
-    private float gravityForce = 0.009815434f;
+    public float gravityForce = 0.009815434f;
     private Vector3 moveVector;
 
     private CharacterController ch_controller;
@@ -22,6 +22,8 @@ public class Testing_Controler : MonoBehaviour
         Move();
         moveVector.y = moveVector.y * gravityForce;
         ch_controller.Move(moveVector * Time.deltaTime);
+        // if (Input.GetKeyDown("space"))
+        //    moveVector.z = moveVector.z * -jump;
     }
 
     private void Move()
