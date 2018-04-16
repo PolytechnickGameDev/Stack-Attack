@@ -1,32 +1,38 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-
+﻿using UnityEngine;
+using System.Collections;
 public class HeroMove : MonoBehaviour
 {
-
+    public GameObject MCharacter;
+    public float speedRotation;
     public float speed;
-    public float jump;
+    public float jumpSpeed;
 
-    private float gravityForce;
-    private Vector3 moveVector;
+    public int Rotate { get; private set; }
 
-    private CharacterController ch_controller;
     void Start()
     {
-        ch_controller = GetComponent<CharacterController>();
-
+        MCharacter = (GameObject)this.gameObject;
+       
     }
     void Update()
     {
-        Move();
+        if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow))
+        {
+            MCharacter.transform.position -= Vector3.left * speed*Time.deltaTime;
+            if (Rotate = 90)
+            {
+                MCharacter.transform.Rotate(Vector3.up * speedRotation);
+  
+        }
+        if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow))
+        {
+            MCharacter.transform.position -= Vector3.right * speed* Time.deltaTime;
+            MCharacter.transform.Rotate(Vector3.down * speedRotation);
+        }
+        if (Input.GetKeyDown(KeyCode.W))
+        {
+            MCharacter.transform.position += MCharacter.transform.up * jumpSpeed * Time.deltaTime;
+        }
     }
-
-    private void Move()
-    {
-        moveVector = Vector3.zero;
-        moveVector.x = Input.GetAxis("Horizontal") * speed;
-        ch_controller.Move(moveVector * Time.deltaTime);
-    }
-
+}
 }
