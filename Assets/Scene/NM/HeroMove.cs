@@ -7,8 +7,6 @@ public class HeroMove : MonoBehaviour
     public float speed;
     public float jumpSpeed;
 
-    public int Rotate { get; private set; }
-
     void Start()
     {
         MCharacter = (GameObject)this.gameObject;
@@ -19,9 +17,6 @@ public class HeroMove : MonoBehaviour
         if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow))
         {
             MCharacter.transform.position -= Vector3.left * speed*Time.deltaTime;
-            if (Rotate = 90)
-            {
-                MCharacter.transform.Rotate(Vector3.up * speedRotation);
   
         }
         if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow))
