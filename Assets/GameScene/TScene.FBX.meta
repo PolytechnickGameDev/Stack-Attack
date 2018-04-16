@@ -1,6 +1,6 @@
 fileFormatVersion: 2
-guid: e0db693a809141f4c856f72808f848cc
-timeCreated: 1522191680
+guid: e692fd181bfc45c47b6e61883fff1203
+timeCreated: 1523877835
 licenseType: Free
 ModelImporter:
   serializedVersion: 22
@@ -165,11 +165,10 @@ ModelImporter:
     100314: Box696
     100316: Box757
     100318: Box758
-    100320: Box759
-    100322: Cylinder001
-    100324: Cylinder002
-    100326: Group001
-    100328: //RootNode
+    100320: Cylinder001
+    100322: Cylinder002
+    100324: Group001
+    100326: //RootNode
     400000: Box178
     400002: Box179
     400004: Box181
@@ -330,13 +329,12 @@ ModelImporter:
     400314: Box696
     400316: Box757
     400318: Box758
-    400320: Box759
-    400322: Cylinder001
-    400324: Cylinder002
-    400326: Group001
-    400328: //RootNode
+    400320: Cylinder001
+    400322: Cylinder002
+    400324: Group001
+    400326: //RootNode
     2100000: 20 - Default
-    2100002: 02 - Default
+    2100002: 19 - Default
     2100004: No Name
     2300000: Box178
     2300002: Box179
@@ -498,9 +496,8 @@ ModelImporter:
     2300314: Box696
     2300316: Box757
     2300318: Box758
-    2300320: Box759
-    2300322: Cylinder001
-    2300324: Cylinder002
+    2300320: Cylinder001
+    2300322: Cylinder002
     3300000: Box178
     3300002: Box179
     3300004: Box181
@@ -661,9 +658,8 @@ ModelImporter:
     3300314: Box696
     3300316: Box757
     3300318: Box758
-    3300320: Box759
-    3300322: Cylinder001
-    3300324: Cylinder002
+    3300320: Cylinder001
+    3300322: Cylinder002
     4300000: Box182
     4300002: Box181
     4300004: Box256
@@ -824,9 +820,8 @@ ModelImporter:
     4300314: Box696
     4300316: Box475
     4300318: Box758
-    4300320: Box759
-    4300322: Cylinder001
-    4300324: Cylinder002
+    4300320: Cylinder001
+    4300322: Cylinder002
     9500000: //RootNode
   externalObjects: {}
   materials:
