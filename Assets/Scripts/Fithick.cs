@@ -5,7 +5,7 @@ using UnityEngine;
 public class Fithick : MonoBehaviour {
 
     public GameObject _object;
-
+    public Collider coll = new Collider();
 
     // Use this for initialization
     void Start () {
@@ -14,13 +14,15 @@ public class Fithick : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        if(!(_object))
+       
         _object.transform.position -= Vector3.up * Time.deltaTime;
         
-	}
 
-    void OnCollisionEnter()
+
+    }
+
+    void OnTriggerEnter(Collider other)
     {
-        Debug.Log("Hit Something");  // Передаем сообщение в консоль Unity  
+        _object.transform.position += Vector3.up * Time.deltaTime;
     }
 }

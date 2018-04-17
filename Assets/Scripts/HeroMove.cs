@@ -36,5 +36,7 @@ public class Move : MonoBehaviour
         {
             MCharacter.transform.position += MCharacter.transform.up * jumpSpeed * Time.deltaTime;
         }
+        if (MCharacter.transform.position.y >  0.629)
+        MCharacter.transform.position -= Vector3.up * Time.deltaTime;
     }
 }
