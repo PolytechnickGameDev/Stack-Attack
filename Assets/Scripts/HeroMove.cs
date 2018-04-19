@@ -1,12 +1,11 @@
 ﻿using UnityEngine;
 using System.Collections;
-public class Move : MonoBehaviour
+public class HeroMove : MonoBehaviour
 {
     public GameObject MCharacter;
-    public int speedRotation = 3;
-    public int speed = 5;
-    
-    public int jumpSpeed = 50;
+    public float speedRotation;
+    public float speed;
+    public float jumpSpeed;
 
     void Start()
     {
@@ -15,28 +14,28 @@ public class Move : MonoBehaviour
     }
     void Update()
     {
-        if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.UpArrow))
-        {
-            MCharacter.transform.position += MCharacter.transform.forward * speed * Time.deltaTime;
-            
-        }
-        if (Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.DownArrow))
-        {
-            MCharacter.transform.position -= MCharacter.transform.forward * speed * Time.deltaTime;
-        }
         if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow))
         {
-            MCharacter.transform.Rotate(Vector3.down * speedRotation);
+            MCharacter.transform.position -= Vector3.left * speed*Time.deltaTime;
+  
         }
         if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow))
         {
-            MCharacter.transform.Rotate(Vector3.up * speedRotation);
+            MCharacter.transform.position -= Vector3.right * speed* Time.deltaTime;
+            MCharacter.transform.Rotate(Vector3.down * speedRotation);
         }
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKey(KeyCode.W))
         {
-            MCharacter.transform.position += MCharacter.transform.up * jumpSpeed * Time.deltaTime;
+            MCharacter.transform.position += Vector3.up * jumpSpeed * Time.deltaTime;
         }
-        if (MCharacter.transform.position.y >  0.629)
-        MCharacter.transform.position -= Vector3.up * Time.deltaTime;
+       // if (MCharacter.transform.position.y > 0.629) gi();
+        
     }
+
+    void gi ()
+    {
+      //  while(MCharacter.transform.position.y > 0.629)
+            MCharacter.transform.position -= Vector3.up * Time.deltaTime;
+    } 
 }
+
